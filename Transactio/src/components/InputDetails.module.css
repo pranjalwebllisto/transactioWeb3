@@ -1,0 +1,71 @@
+.container {
+    width: 100%;
+    display: flex;
+
+    text-align: center;
+    padding: 3em;
+    background-color: rgba(224, 220, 220, 0.1);
+}
+
+.container input {
+
+    border: 1px solid black;
+    padding: 1em;
+    border-radius: 0.3em;
+    background-color: white;
+    height: 3em;
+    width: 15em;
+    outline: none;
+    display: flex;
+
+
+
+
+}
+
+.heading {
+    color: rgb(0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: xx-large;
+}
+
+.headingContainer {
+    display: flex;
+    justify-content: flex-start;
+    position: static;
+    padding: 1em;
+    margin-top: 1em;
+
+    margin-left: 10em
+}
+
+.button {
+    height: 3em;
+    width: 9em;
+    background-color: blue;
+    border: none;
+    outline: none;
+    padding: 1em;
+    border-radius: 1em;
+    color: white;
+    font-size: medium;
+    margin-top: 1em;
+
+}
+
+.animation {
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    margin-left: 10em;
+    margin-top: 3em;
+
+}
+
+.form {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 1em;
+    margin-top: 5.5em;
+}

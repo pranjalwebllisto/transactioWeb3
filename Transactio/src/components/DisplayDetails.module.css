@@ -1,0 +1,57 @@
+.header{
+    background-color:rgb(12, 12, 235) ;
+    width: 100%;
+    border-top-left-radius: 1em;
+    border-top-right-radius:1em;
+    height:3em;
+    text-align: center;
+    padding-top: 1em;
+}
+.body{display:inline-block ; padding:1em;text-align: center;align-items: center;}
+.card{border-radius: 1em;
+    display:inline-block;
+    
+height:14em;min-width:10em;
+background-color: rgb(255, 255, 255);
+color:rgb(12, 12, 235)}
+
+.button {
+    display: none;
+    
+}
+
+.card:hover button {
+    display: inline-block;
+    position: relative;   
+    width:100%;
+    background-color:rgb(12, 12, 235);
+    border:none;
+    outline:none;
+    padding:1em;
+    border-radius:1em;
+    color:white;
+    animation: button-hover 0.5s both;
+}
+@keyframes button-hover {
+  0%    { opacity: 0;top:0; }
+  20%   { opacity: 0;top:-2px; }
+  80%   { opacity: 1;top:-5px; }
+  100%  { opacity: 1; top:-5px;}
+}
+
+
+.details{
+    padding:1em;
+}
+.heading{
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+
+}
+.headingButton{
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+
+}

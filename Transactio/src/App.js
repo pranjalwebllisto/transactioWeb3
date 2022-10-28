@@ -7,8 +7,11 @@ import SignUp from "./components/pages/SignUp/SignUp";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/pages/Footer.js/Footer";
-
+import { useSelector } from 'react-redux'
 function App() {
+  // const val = useSelector(state => state.metamask?.accountNumber)
+  // console.log("in app", val)
+
   return (
     <Router>
       <Navbar />

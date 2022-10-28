@@ -5,7 +5,9 @@ import { Button } from './Button';
 import { getWeb3 } from '../components/pages/Services/connectWallet'
 import Web3 from 'web3';
 import Web3Modal from "web3modal";
+import DisplayDetails from './DisplayDetails'
 import { connectMetamask, updateAccount } from '../features/metamaskSlice';
+//import { metamaskReducer } from '../features/metamaskSlice'
 
 function HeroSection({
   lightBg,
@@ -23,10 +25,11 @@ function HeroSection({
   const dispatch = useDispatch()
 
 
-  const account = useSelector(state => state.metamask.accountNumber)
-  const metamaskConnected = useSelector(state => state.metamask.isMetamaskConnected)
+  const account = useSelector(state => state.metamask?.accountNumber)
+  console.log("toolkit account number", account)
+  const metamaskConnected = useSelector(state => state.metamask?.isMetamaskConnected)
 
-  const balance = useSelector(state => state.metamask.balance)
+  const balance = useSelector(state => state.metamask?.balance)
   const getweb = async () => {
     const web = await getWeb3();
     console.log(web)
@@ -57,7 +60,12 @@ function HeroSection({
   }
   const checkIsConnected = async () => {
     const acc = await window.ethereum.request({ method: 'eth_accounts' })
+
     console.log("already connected ", acc)
+    if (acc) {
+      const data = await window.ethereum.request({ method: "eth_requestAccounts" })
+      dispatch(updateAccount(data[0]))
+    }
     return acc
   }
 
@@ -115,6 +123,7 @@ function HeroSection({
                 </Button>}
 
               </div>
+              {account && <DisplayDetails account={account} balance={balance}></DisplayDetails>}
             </div>
             <div className='col'>
               <div className='home__hero-img-wrapper'>

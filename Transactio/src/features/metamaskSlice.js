@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const metamaskSlice = createSlice(
     {
         name: 'metamask',
-        initialState: { accountNumber: '', balance: '', isMetamaskConnected: false },
+        initialState: { accountNumber: '', balance: 0, isMetamaskConnected: false },
         reducers: {
             connectMetamask: (state, action) => {
                 return { ...state, isMetamaskConnected: action.payload }
